@@ -1,10 +1,9 @@
 node{
    stage('SCM Checkout'){
      git 'https://github.com/sureshkanna-alg/my-app'
-   } 
+   }
    stage('Compile-Package'){
-      // Get maven home path
-      def mvnHome =  tool name: 'maven-3', type: 'maven'   
-      sh sudo "${mvnHome}/bin/mvn package"
+      // Get maven home path   
+      sh 'mvn clean package'
    }
 }
