@@ -3,7 +3,7 @@ node{
      git 'https://github.com/sureshkanna-alg/my-app'
    }
    stage('Compile-Package'){
-      // Get maven home path 
+      // Get maven home path ;;
       def mvnHome = tool name: 'maven-3.3.9', type: 'maven'
       sh "${mvnHome}/bin/mvn clean package"
    }
